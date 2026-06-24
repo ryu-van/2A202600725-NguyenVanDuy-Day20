@@ -27,7 +27,10 @@ class LLMClient:
 
     def __init__(self) -> None:
         self.settings = get_settings()
-        self.client = OpenAI(api_key=self.settings.openai_api_key)
+        self.client = OpenAI(
+            api_key=self.settings.openai_api_key,
+            base_url=self.settings.openai_base_url,
+        )
 
     def complete(self, system_prompt: str, user_prompt: str) -> LLMResponse:
         """Return a model completion using OpenAI Chat Completions API.

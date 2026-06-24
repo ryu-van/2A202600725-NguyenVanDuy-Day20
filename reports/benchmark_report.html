@@ -925,14 +925,14 @@
   {
     "run_name": "Single-Agent Baseline (Query 1)",
     "query": "Research GraphRAG state-of-the-art and write a 500-word summary",
-    "latency_seconds": 3.3820210000012594,
-    "estimated_cost_usd": 1.55e-05,
-    "quality_score": 8.5,
+    "latency_seconds": 238.83588969999983,
+    "estimated_cost_usd": 0.0017565,
+    "quality_score": 7.5,
     "notes": "Sources: 0, Cited: 0 (0%)",
     "route_history": [],
     "sources": [],
     "trace": [],
-    "final_answer": "Simulated response placeholder. No valid API key provided.",
+    "final_answer": "\n# GraphRAG: State-of-the-Art in Knowledge Graph-Augmented Language Models\n\n## Introduction\n\n**GraphRAG** (Graph-based Retrieval-Augmented Generation) represents a significant advancement in leveraging structured knowledge for language model reasoning. Developed by Microsoft Research, this approach integrates large language models (LLMs) with knowledge graphs to improve accuracy in answering complex, multi-hop questions. Unlike traditional RAG methods that retrieve unstructured text snippets, GraphRAG constructs a structured graph of entities and relationships, enabling deeper contextual understanding.\n\n## How It Works\n\nGraphRAG operates through three key steps:\n1. **Query Parsing**: The LLM extracts entities and relationships from the input query to form a semantic graph.\n2. **Graph Construction**: Relevant information is retrieved from a knowledge corpus and organized into a graph structure, capturing entity connections.\n3. **Answer Generation**: The LLM traverses the graph to perform multi-hop reasoning, synthesizing answers grounded in structured data.\n\nThis process allows the model to dynamically adapt to the query's complexity, focusing on relevant subgraphs rather than fixed documents.\n\n## Advantages\n\n- **Enhanced Reasoning**: Outperforms RAG in tasks requiring multi-step logic, such as fact verification and complex question answering.\n- **Reduced Hallucinations**: By grounding responses in explicit graph relationships, it minimizes the generation of incorrect or fabricated information.\n- **Interpretability**: The graph structure provides a transparent reasoning path, aiding debugging and user trust.\n- **Scalability**: Efficiently handles large-scale knowledge sources by focusing on query-relevant subgraphs.\n\n## Use Cases\n\nGraphRAG excels in:\n- **Enterprise Search**: Providing precise answers across interconnected business data.\n- **Customer Support**: Addressing nuanced queries by linking product details, user history, and policies.\n- **Scientific Research**: Enabling hypothesis generation by mapping relationships in academic papers.\n- **Legal Analysis**: Connecting case precedents and statutes for informed decision-making.\n\n## Challenges\n\n- **Computational Overhead**: Building and querying large graphs demands substantial resources, limiting real-time applications.\n- **Dynamic Data Handling**: Updating graphs with fresh information while maintaining consistency remains complex.\n- **Integration Complexity**: Requires seamless coordination between retrieval and graph database systems.\n\n## Performance Benchmarks\n\nEvaluations on datasets like HotpotQA and FEVER show GraphRAG achieving higher accuracy (up to 15-20% improvement) in multi-hop tasks compared to RAG baselines. It also demonstrates robustness in handling sparse or ambiguous queries.\n\n## Future Directions\n\nResearch is exploring:\n- **Multimodal Extensions**: Incorporating images and tables into graph structures.\n- **Real-Time Adaptation**: Techniques for incrementally updating graphs without re-computation.\n- **Domain Specialization**: Tailoring GraphRAG for healthcare, finance, and other sectors with domain-specific ontologies.\n- **Efficient Algorithms**: Reducing overhead through approximate graph traversal and pruning strategies.\n\n## Conclusion\n\nGraphRAG marks a pivotal step in merging graph theory with generative AI, offering a structured alternative to traditional RAG. Its ability to perform sophisticated reasoning while maintaining interpretability positions it as a promising tool for applications requiring high factual accuracy. As techniques evolve, it may bridge the gap between unstructured language models and structured knowledge systems, enabling more reliable AI solutions.\n",
     "research_notes": null,
     "analysis_notes": null,
     "errors": []
@@ -940,56 +940,54 @@
   {
     "run_name": "Multi-Agent Workflow (Query 1)",
     "query": "Research GraphRAG state-of-the-art and write a 500-word summary",
-    "latency_seconds": 26.6295835000019,
-    "estimated_cost_usd": 0.001542,
-    "quality_score": 8.5,
-    "notes": "Sources: 5, Cited: 5 (100%)",
+    "latency_seconds": 88.25042769999891,
+    "estimated_cost_usd": 0.0031808999999999995,
+    "quality_score": 0.0,
+    "notes": "Sources: 5, Cited: 0 (0%)",
     "route_history": [
       "researcher",
       "analyst",
-      "writer",
-      "critic",
       "done"
     ],
     "sources": [
       {
-        "title": "Welcome - GraphRAG",
-        "url": "https://microsoft.github.io/graphrag",
-        "snippet": "Figure 1: LLM-generated knowledge graph built from a private dataset using GPT-4 Turbo. Figure 1: An LLM-generated knowledge graph built using GPT-4 Turbo. GraphRAG is a structured, hierarchical approach to Retrieval Augmented Generation (RAG), as opposed to naive semantic-search approaches using plain text snippets. The GraphRAG process involves extracting a knowledge graph out of raw text, building a community hierarchy, generating summaries for these communities, and then leveraging these structures when perform RAG-based tasks. To learn more about GraphRAG and how it can be used to enhance your language model's ability to reason about your private data, please visit the Microsoft Research Blog Post. To start using GraphRAG, check out the *Get Started* guide. This technique is an important part of most LLM-based tools and the majority of RAG approaches use vector similarity as the search technique, which we call *Baseline RAG*. This graph, along with community summaries and graph machine learning outputs, are used to augment prompts at query time.",
-        "metadata": {
-          "score": 0.4186262
-        }
-      },
-      {
         "title": "Retrieval-Augmented Generation with Graphs (GraphRAG) - arXiv",
         "url": "https://arxiv.org/html/2501.00309v2",
-        "snippet": "# Retrieval-Augmented Generation with Graphs (GraphRAG). Retrieval-augmented generation (RAG) is a powerful technique that enhances downstream task execution by retrieving additional information, such as knowledge, skills, and tools from external sources. Graph, by its intrinsic \"nodes connected by edges\" nature, encodes massive heterogeneous and relational information, making it a golden resource for RAG in tremendous real-world applications. As a result, we have recently witnessed increasing attention on equipping RAG with Graph, i.e., GraphRAG. However, unlike conventional RAG, where the retriever, generator, and external data sources can be uniformly designed in the neural-embedding space, the uniqueness of graph-structured data, such as diverse-formatted and domain-specific relational knowledge, poses unique and significant challenges when designing GraphRAG for different domains. Our survey first proposes a holistic GraphRAG framework by defining its key components, including query processor, retriever, organizer, generator, and data source. The retrieved content is then refined by an organizer and seamlessly integrated with the original query or instruction, which is further fed into the generator to produce the final answer.",
+        "snippet": "[2024] \u2191 Imed Keraghel, Stanislas Morbieu, and Mohamed Nadif. A survey on recent advances in named entity recognition. arXiv preprint arXiv:2401.10825, 2024.",
         "metadata": {
-          "score": 0.3534064
+          "score": 0.8332299
         }
       },
       {
-        "title": "GraphRAG Explained: Enhancing RAG with Knowledge Graphs",
-        "url": "https://medium.com/@zilliz_learn/graphrag-explained-enhancing-rag-with-knowledge-graphs-3312065f99e1",
-        "snippet": "# GraphRAG Explained: Enhancing RAG with Knowledge Graphs | by Zilliz | Medium. # GraphRAG Explained: Enhancing RAG with Knowledge Graphs. Retrieval Augmented Generation (RAG) is a technique that connects external data sources to enhance the output of large language models) (LLMs). A baseline RAG usually integrates a vector database and an LLM, where the vector database stores and retrieves contextual information for user queries, and the LLM generates answers based on the retrieved context. For example, consider this question: \u201c_What name was given to the son of the man who defeated the usurper Allectus?\u201d_. To address such challenges, Microsoft Research introduced GraphRAG, a brand-new method that augments RAG retrieval and generation with knowledge graphs. In the following sections, we\u2019ll explain how GraphRAG works under the hood and how to run it with the Milvusvector database. Unlike a baseline RAG that uses a vector database to retrieve semantically similar text, GraphRAG enhances RAG by incorporating knowledge graphs (KGs).",
+        "title": "Graph Retrieval-Augmented Generation: A Survey",
+        "url": "https://dl.acm.org/doi/10.1145/3777378",
+        "snippet": "We provide a comprehensive and systematic review of existing state-of-the-art GraphRAG methodologies. We offer a formal definition of GraphRAG, outlining",
         "metadata": {
-          "score": 0.3280454
+          "score": 0.53473455
         }
       },
       {
-        "title": "How GraphRAG Accelerates Time to Insight and Boosts ROI",
-        "url": "https://graphwise.ai/blog/from-data-to-decisions-how-graphrag-accelerates-time-to-insight-and-boosts-roi",
-        "snippet": "# From Data to Decisions \u2014 How GraphRAG Accelerates Time to Insight and Boosts ROI. Learn how GraphRAG helps teams cut decision latency, improve accuracy, and turn complex data into trusted insights. Data teams spend a lot of time cleaning and validating information \u2014 stretching decision timelines and eroding confidence in results. Graphwise\u2019s GraphRAG\u00a0changes this by adding a graph-based layer of relationships that helps AI interpret meaning beyond just text. The result is faster, traceable, and more reliable insights \u2014 giving organizations a clearer path from raw data to confident decisions and measurable ROI. This post examines how data complexity and decision latency impact enterprise performance \u2014 and how GraphRAG\u2019s graph-based architecture transforms information into a strategic advantage. Without a solution that links data, context, and meaning \u2014 the sheer volume of information can become more of a barrier than a competitive advantage. This gives the AI a richer understanding of the data and how different elements relate to one another \u2014 providing teams with answers they can trust.",
+        "title": "pengboci/GraphRAG-Survey - GitHub",
+        "url": "https://github.com/pengboci/GraphRAG-Survey",
+        "snippet": "Recently, Retrieval-Augmented Generation (RAG) has achieved remarkable success in addressing the challenges of Large Language Models (LLMs)",
         "metadata": {
-          "score": 0.28057742
+          "score": 0.52422476
         }
       },
       {
-        "title": "Microsoft's GraphRAG is One of the Newest RAG Techniques",
-        "url": "https://thesequence.substack.com/p/the-sequence-knowledge-497-microsofts",
-        "snippet": "# TheSequence. # The Sequence Knowledge #497: Microsoft's GraphRAG is One of the Newest RAG Techniques. ### The methods enables RAG in an interconnected graph of documents. ## Today we will Discuss:. *Deep diving into Microsoft\u2019s GraphRAG paper.*. ### **\ud83d\udca1 AI Concept of the Day: Getting Into GraphRAG**. Graph-RAG represents a significant advancement in retrieval augmented generation, leveraging knowledge graphs to enhance the contextual understanding and response generation capabilities of large language models (LLMs). This technique transforms isolated documents into an interconnected web of knowledge, revealing the underlying structure of complex datasets. By incorporating a graph database as a source of contextual information, Graph-RAG enables LLMs to access different levels of information about interconnections in the data, allowing for both a holistic view of the entire knowledge base and granular observations of specific data point relationships. ## This post is for paid subscribers.",
+        "title": "(PDF) A Survey of Graph Retrieval-Augmented Generation for ...",
+        "url": "https://www.researchgate.net/publication/388401799_A_Survey_of_Graph_Retrieval-Augmented_Generation_for_Customized_Large_Language_Models",
+        "snippet": "In this survey, we systematically analyze the technical foundations of GraphRAG and examine current implementations across various professional",
         "metadata": {
-          "score": 0.27726305
+          "score": 0.48060113
+        }
+      },
+      {
+        "title": "From Embeddings to Graphs: Surveying the Cutting-Edge in RAG ...",
+        "url": "https://medium.com/@sarahzouinina/from-embeddings-to-graphs-surveying-the-cutting-edge-in-rag-2024-2025-a8226af1372a",
+        "snippet": "What's Changed in 2024 and 2025: Retrieval is Getting Smarter (and Weirder). The early days of RAG were dominated by one paradigm: dense",
+        "metadata": {
+          "score": 0.44116792
         }
       }
     ],
@@ -999,19 +997,19 @@
         "payload": {
           "route": "researcher",
           "iteration": 1,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "input_tokens": 492,
+          "output_tokens": 4,
+          "cost_usd": 7.620000000000001e-05
         }
       },
       {
         "name": "researcher_run",
         "payload": {
-          "search_query": "Research GraphRAG state-of-the-art and write a 500-word summary",
+          "search_query": "GraphRAG state-of-the-art 2024 review survey recent advances arXiv papers",
           "sources_added": 5,
-          "input_tokens": 600,
-          "output_tokens": 210,
-          "cost_usd": 0.000216
+          "input_tokens": 660,
+          "output_tokens": 895,
+          "cost_usd": 0.000636
         }
       },
       {
@@ -1019,82 +1017,46 @@
         "payload": {
           "route": "analyst",
           "iteration": 2,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "input_tokens": 1500,
+          "output_tokens": 258,
+          "cost_usd": 0.00037979999999999996
         }
       },
       {
         "name": "analyst_run",
         "payload": {
-          "input_tokens": 500,
-          "output_tokens": 250,
-          "cost_usd": 0.000225
-        }
-      },
-      {
-        "name": "supervisor_routing",
-        "payload": {
-          "route": "writer",
-          "iteration": 3,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
-        }
-      },
-      {
-        "name": "writer_run",
-        "payload": {
-          "input_tokens": 800,
-          "output_tokens": 400,
-          "cost_usd": 0.00036
-        }
-      },
-      {
-        "name": "supervisor_routing",
-        "payload": {
-          "route": "critic",
-          "iteration": 4,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
-        }
-      },
-      {
-        "name": "critic_run",
-        "payload": {
-          "input_tokens": 500,
-          "output_tokens": 5,
-          "cost_usd": 7.8e-05
+          "input_tokens": 767,
+          "output_tokens": 1929,
+          "cost_usd": 0.0012724499999999998
         }
       },
       {
         "name": "supervisor_routing",
         "payload": {
           "route": "done",
-          "iteration": 5,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "iteration": 3,
+          "input_tokens": 3131,
+          "output_tokens": 152,
+          "cost_usd": 0.00056085
         }
       }
     ],
-    "final_answer": "# Comprehensive Research Report: State-of-the-Art\n\n## Executive Summary\nThis report provides an in-depth analysis of the query topic, synthesizing information from multiple sources.\n\n## Key Findings\n- Multi-Agent coordination improves accuracy through specialized sub-tasks, as detailed in [Welcome - GraphRAG].\n- Implementations like LangGraph allow robust cyclic graph definitions to solve complex goals [Retrieval-Augmented Generation with Graphs (GraphRAG) - arXiv].\n\n## References\n- Welcome - GraphRAG\n- Retrieval-Augmented Generation with Graphs (GraphRAG) - arXiv\n- GraphRAG Explained: Enhancing RAG with Knowledge Graphs\n- How GraphRAG Accelerates Time to Insight and Boosts ROI\n- Microsoft's GraphRAG is One of the Newest RAG Techniques",
-    "research_notes": "### Research Notes: State-of-the-Art Analysis\n\n- **Key Concept**: Multi-agent systems leverage multiple specialized LLM agents cooperating to solve complex goals [Simulated Web Result].\n- **Technical Details**: By partitioning roles (e.g. Supervisor, Worker, Critic), the system limits context drift and reduces reasoning errors [Understanding SOTA - SOTA Guide].\n- **Architecture**: The workflow compiles into a StateGraph, allowing cycle-based revisions and structured handoffs [Recent Advances].",
-    "analysis_notes": "### Analyst Insights & Comparative Report\n\n#### 1. Key Claims\n- Partitioned agent roles increase overall task success rate compared to a single monolithic agent.\n\n#### 2. Comparative Analysis\n- *Single-Agent*: High speed, low cost, but susceptible to context confusion.\n- *Multi-Agent*: Higher latency and cost, but robust fact-checking and precision.\n\n#### 3. Evidence Quality & Gaps\n- Evidence quality is strong, supported by simulated index results. No major gaps identified.",
+    "final_answer": null,
+    "research_notes": "### Research Notes: GraphRAG State-of-the-Art Overview\n\n**Overview of GraphRAG**  \nRecent advancements in the field of Graph-Related Language Models (GraphRAG) have marked a significant shift in how Large Language Models (LLMs) process and utilize knowledge graphs. The core aim of GraphRAG is to enhance the semantic understanding of contextual relationships by integrating structured graph knowledge into language generation.\n\n**Key Developments (2024)**  \nThe current landscape highlights a rapid evolution in RAG methodologies. Notably, a 2024 survey by Keraghel et al. (Imed, Morbieu, and Nadif) provides a comprehensive review of GraphRAG techniques, emphasizing recent methodological improvements and challenges faced during implementation. According to this survey, GraphRAG frameworks have seen a surge in adoption due to their ability to scaffold accurate knowledge retrieval and contextual interpretation.\n\n**Technical Foundations**  \nScientific literature emphasizes that GraphRAG relies on three primary components:  \n1. **Representation Embeddings** \u2013 Converting graph data (nodes, edges, and attributes) into vector formats that LLMs can process (Source: ArXiv).  \n2. **Retrieval Mechanisms** \u2013 Leveraging graph databases to identify relevant passages or entities during generation (Source: ResearchGate).  \n3. **Integration into RAG Pipelines** \u2013 Seamlessly blending graph queries with GPT-style outputs to refine coherence and specificity (Source: Medium).\n\n**Technical Challenges and Solutions**  \nDespite progress, challenges persist:  \n- **Scalability**: Handling large-scale knowledge graphs efficiently remains a barrier.  \n- **Complex Query Handling**: Tools evolved to interpret nuanced, multi-hop queries within graph structures (Source: pengboci).  \n\n**Surveillance Trends (2024\u20132025)**  \nA 2024\u20132025 review highlights a trend toward more sophisticated retrieval strategies. Early frameworks relied heavily on dense semantic embeddings but now incorporate enhanced indexing and ranking algorithms. According to *Embeddings to Graphs: Surveying the Cutting-Edge in RAG*, the trend is shifting toward smarter, adaptive retrieval systems that reduce ambiguity in LLM outputs.\n\n**Implications for Practice**  \nFor technical learners, understanding these developments is crucial. The literature underscores the importance of hybrid models that combine embedding-based retrieval with retrieval-augmented generation architectures. Future work must focus on optimizing these systems for both precision and performance scalability.\n\n**Conclusion**  \nThe state-of-the-art in GraphRAG reflects a blend of theoretical innovation and practical application. By integrating graph data with advanced retrieval techniques, researchers are pushing LLMs toward more contextually accurate and informative responses. The ongoing exploration of these methodologies promises to reshape how structured knowledge is embedded within language understanding systems.",
+    "analysis_notes": "**GraphRAG State\u2011of\u2011the\u2011Art: Structured Analysis (\u2248500\u202fwords)**  \n\n---\n\n### Key Claims  \n\n| Claim | Supporting Evidence (from notes) | Interpretation |\n|-------|-----------------------------------|----------------|\n| **GraphRAG integrates graph knowledge into LLMs** to improve semantic understanding of contextual relationships. | Overview paragraph; \u201ccore aim \u2026 integrating structured graph knowledge into language generation.\u201d | Positions GraphRAG as a knowledge\u2011augmentation paradigm rather than a standalone model. |\n| **Three technical pillars** underlie current GraphRAG systems: (1) Representation Embeddings, (2) Retrieval Mechanisms, (3) Integration into RAG pipelines. | \u201cTechnical Foundations\u201d section; each pillar cited to ArXiv, ResearchGate, Medium respectively. | Provides a concise architectural blueprint for practitioners. |\n| **Rapid methodological evolution in 2024**, highlighted by a comprehensive survey (Keraghel\u202fet\u202fal., Imed, Morbieu, Nadif). | \u201cKey Developments (2024)\u201d \u2013 cites the 2024 survey as a catalyst for increased adoption. | Suggests that recent literature consolidating best practices. |\n| **Scalability and complex query handling remain open challenges**; solutions involve advanced indexing, ranking, and multi\u2011hop query tools. | \u201cTechnical Challenges and Solutions\u201d \u2013 scalability barrier; complex query handling evolved (Source: pengboci). | Indicates where research effort is still needed. |\n| **Surveillance trends (2024\u20112025) shift toward smarter, adaptive retrieval** that blends dense embeddings with enhanced indexing/ranking to reduce LLM output ambiguity. | \u201cSurveillance Trends (2024\u20132025)\u201d \u2013 cites *Embeddings to Graphs: Surveying the Cutting\u2011Edge in RAG*. | Signals a move from static embedding lookup to dynamic, context\u2011aware retrieval. |\n| **Hybrid models (embedding\u2011based retrieval + retrieval\u2011augmented generation) are recommended for precision and scalability**. | \u201cImplications for Practice\u201d \u2013 emphasizes hybrid models; future work must optimize precision & performance. | Provides a concrete direction for implementation. |\n\n---\n\n### Comparative Analysis  \n\nWhile the notes do not juxtapose competing frameworks explicitly, implicit contrasts can be inferred:\n\n1. **Dense Semantic Embeddings vs. Adaptive Retrieval** \u2013 Early GraphRAG approaches relied heavily on static embeddings (cite ArXiv). The 2024\u20112025 trend favors adaptive indexing/ranking (cite *Embeddings to Graphs* survey), suggesting a performance\u2011accuracy trade\u2011off: embeddings give fast similarity search but may miss nuanced relational patterns; adaptive methods add computational overhead but improve precision on multi\u2011hop queries.  \n\n2. **Graph\u2011Database Retrieval vs. Pure Vector Search** \u2013 The retrieval mechanism pillar (ResearchGate) highlights leveraging native graph databases to traverse edges, which can capture structural semantics that pure vector similarity cannot. This contrasts with vanilla RAG that treats the knowledge base as an unstructured corpus.  \n\n3. **Survey\u2011Driven Consensus vs. Fragmented Tool\u2011Specific Solutions** \u2013 The Keraghel\u202fet\u202fal. 2024 survey attempts to unify diverse methodological improvements, whereas the reference to \u201cpengboci\u201d (a specific tool for complex query handling) indicates that niche solutions still coexist with broader frameworks.  \n\nOverall, the consensus leans toward **hybrid architectures** that combine the speed of embedding\u2011based candidate generation with the expressiveness of graph\u2011aware re\u2011ranking or multi\u2011hop traversal.\n\n---\n\n### Evidence Quality & Gaps  \n\n| Aspect | Assessment | Missing / Weak Evidence |\n|--------|------------|--------------------------|\n| **Citation Depth** | Claims are anchored to identifiable sources (ArXiv, ResearchGate, Medium, pengboci, Keraghel\u202fet\u202fal., *Embeddings to Graphs* survey). | No direct links to DOI/URL; reliance on generic source labels makes verification difficult for readers. |\n| **Empirical Validation** | Mentions of \u201csurge in adoption\u201d and \u201cmethodological improvements\u201d lack quantitative metrics (e.g., benchmark scores, latency numbers). | Absence of comparative experiments (baseline RAG vs. GraphRAG) limits assessment of practical impact. |\n| **Scope of Challenges** | Scalability and complex query handling are noted, but no detail on graph size thresholds, hardware requirements, or failure modes. | Need for case studies showing breakdown points (e.g., >10M nodes, >100\u2011hop queries). |\n| **Future Work Direction** | Calls for optimization of precision & performance scalability are high\u2011level; no concrete research questions (e.g., loss functions, unified training). | Lack of roadmap or prioritization of open problems. |\n| **Bias / Perspective** | Notes appear to synthesize recent literature without acknowledging potential over\u2011hype or alternative viewpoints (e.g., critiques that graph integration may add unnecessary complexity for certain domains). | Missing counter\u2011arguments or failure cases where GraphRAG underperforms vanilla LLMs. |\n\n---\n\n### Strategic Recommendations (for Technical Learners)  \n\n1. **Build a Mini\u2011GraphRAG Prototype**  \n   - Start with a small, publicly available knowledge graph (e.g., DBpedia subset) and generate embeddings using a library such as **Node2Vec** or **GraphSAGE** (cited via ArXiv source).  \n   - Implement a retrieval step that queries the graph via **SPARQL** or a graph\u2011database API (Neo4j/TigerGraph) to fetch k\u2011hop neighborhoods.  \n   - Fuse the retrieved subgraph embeddings with LLM prompts using a simple concatenation or cross\u2011attention layer (mirroring the \u201cIntegration into RAG Pipelines\u201d pillar).  \n\n2. **Benchmark Against Baselines**  \n   - Measure **retrieval recall**, **generation factuality** (e.g., using FEVER or TriviaQA), and **latency** on a benchmark suite.  \n   - Compare three variants: (a) vanilla RAG (vector store only), (b) GraphRAG with static embeddings, (c) GraphRAG with adaptive re\u2011ranking (inspired by the 2024\u20112025 trend).  \n\n3. **Investigate Scalability Bottlenecks**  \n   - Experiment with graph partitioning (e.g., METIS) and approximate nearest\u2011neighbor indexes (FAISS, ScaNN) to evaluate trade\u2011offs between graph size and query time.  \n   - Document the point at which retrieval latency exceeds a target threshold (e.g., 100\u202fms) and explore solutions like **graph summarization** or **hop\u2011limited sampling**.  \n\n4. **Explore Adaptive Retrieval Strategies**  \n   - Implement a two\u2011stage pipeline: first\u2011stage dense embedding search for candidate generation, followed by a graph\u2011aware re\u2011ranker that scores candidates based on edge types, path lengths, or node centralities.  \n   - Evaluate whether this reduces hallucination rates compared to single\u2011stage embedding retrieval.  \n\n5. **Stay Updated via Surveys & Community**  \n   - Prioritize reading the **Keraghel\u202fet\u202fal. (2024)** survey and the **\u201cEmbeddings to Graphs: Surveying the Cutting\u2011Edge in RAG\u201d** paper for evolving best practices.  \n   - Follow open\u2011source GraphRAG repositories (e.g., LangGraph, LlamaIndex graph plugins) to see how industry implements the three pillars.  \n\nBy following these steps, technical learners can move from conceptual understanding to hands\u2011on experience, identify where the current evidence is thin, and contribute to filling the identified gaps in scalability, complex query handling, and rigorous evaluation.  \n\n---  \n\n*All statements trace back to the supplied research notes; generic source labels (ArXiv, ResearchGate, Medium, pengboci, Keraghel\u202fet\u202fal., *Embeddings to Graphs* survey) correspond to the citations embedded in the notes.*",
     "errors": []
   },
   {
     "run_name": "Single-Agent Baseline (Query 2)",
     "query": "Analyze the security vulnerabilities of Web3 smart contracts",
-    "latency_seconds": 2.332312300000922,
-    "estimated_cost_usd": 1.55e-05,
+    "latency_seconds": 27.474525400000857,
+    "estimated_cost_usd": 0.0020264999999999997,
     "quality_score": 8.5,
     "notes": "Sources: 0, Cited: 0 (0%)",
     "route_history": [],
     "sources": [],
     "trace": [],
-    "final_answer": "Simulated response placeholder. No valid API key provided.",
+    "final_answer": "# Analysis of Security Vulnerabilities in Web3 Smart Contracts  \n\n## Introduction  \nWeb3 smart contracts are self-executing agreements with rules enforced directly on the blockchain by network participants. While offering transparency and programmability, they are inherently prone to vulnerabilities due to their complexity and decentralized nature. This report examines key security risks, real-world cases, and mitigation strategies for developers building or deploying smart contracts.  \n\n---\n\n## Common Vulnerabilities in Web3 Smart Contracts  \n\n### 1. **Reentrancy Attacks**  \n- **Description**: A contract subjected to multiple function calls during a transaction, allowing an attacker to re-enter the function before the initial execution completes. This can drain funds or manipulate transaction outcomes.  \n- **Example**: The \u2014Provokewallet exploit (2014) demonstrated how reentrancy could drain Ether reserves.  \n- **Impact**: Financial losses, compromised Sybil attacks, or unintended state changes.  \n\n### 2. **Integer Overflow/Underflow**  \n- **Description**: Incorrect handling of large numeric values due to fixed-size integer types, leading to incorrect execution (e.g., division mistakes).  \n- **Risk**: Exploits in Solidity or Rust contracts may result in incorrect parameter passing or invalid state transitions.  \n- **Example**: The 2021 $21m MetaMask hack stemmed partially from flawed number handling in custom contracts.  \n\n### 3. **Improper Access Control**  \n- **Description**: Missing or weak restrictions on who can call certain functions (e.g., approve(),transfer()). This allows unauthorized participants to bypass safeguards.  \n- **Risk**: Centralization of control in a single entity or user.  \n\n### 4. **Oracle Manipulation**  \n- **Description**: Reliance on external data sources (e.g., APIs) for decision-making. Malicious actors can manipulate oracle responses to influence contract outcomes.  \n- **Vulnerability**: Smart contracts depend on accurate or trustworthy oracles, which may be compromised.  \n\n### 5. **Denial-of-Service (DoS) Risks**  \n- **Description**: Exploitation of gas limits or contract specifications to freeze user interactivity or block interactions.  \n- **Trend**: High gas costs can render contracts non-functional during peak usage, impacting adoption.  \n\n---\n\n## Case Studies  \n\n### 1. **The DAO Hack (2016)**  \n- **Overview**: A global decentralized finance (DeFi) project suffered a $6.1M loss due to a smart contract bug allowing recursive spending.  \n- **Vulnerability**: Overly complex functions with no proper input validation.  \n- **Lesson**: Rigorous testing (e.g., static analysis, formal verification) is critical.  \n\n### 2. **The Uniswap Vulnerability (2022)**  \n- **Incident**: A mismanaged protocol leveraging limited checks for cross-chain transfers exposed user funds.  \n- **Cause**: Overlooking edge case scenarios in cross-lived contract interactions.  \n\n---\n\n## Mitigation Strategies  \n\n### 1. **Adopt Security Best Practices**  \n- Use **audited frameworks** (e.g., OpenZeppelin, Chainlink Security).  \n- Implement **reentrancy guards** (e.g., checks-effects-interactions pattern).  \n- Prefer **complexity avoidance**: Use standardized libraries instead of custom logic.  \n\n### 2. **Enhance Developer Tools**  \n- Leverage static analysis tools (e.g., Slither, MythX) to detect common vulnerabilities.  \n- Integrate **formal verification** for critical contracts (e.g., verification with CertiK).  \n\n### 3. **Improve Governance & Testing**  \n- Conduct **quantum-resistant cryptography** for long-term security.  \n- Conduct **penetration testing** by third-party auditors and community-driven reviews.  \n\n---\n\n## Conclusion  \nWeb3 smart contracts offer transformative potential but require meticulous design and ongoing auditing to mitigate risks. Developers must balance innovation with security rigor, adopting practices like over-engineering safeguards, robust testing, and transparent communication. Continuous monitoring and adaptation to emerging threats (e.g., quantum computing, ai augmentation) are also essential.  \n\n**Key Takeaway**: Security is not a one-time task but an ongoing commitment integrated into every phase of contract development.  \n\n---  \nThis structured approach ensures technical learners grasp both theoretical concepts and practical solutions for safeguarding Web3 systems.",
     "research_notes": null,
     "analysis_notes": null,
     "errors": []
@@ -1102,15 +1064,17 @@
   {
     "run_name": "Multi-Agent Workflow (Query 2)",
     "query": "Analyze the security vulnerabilities of Web3 smart contracts",
-    "latency_seconds": 31.703620299998875,
-    "estimated_cost_usd": 0.001542,
+    "latency_seconds": 378.63590939999995,
+    "estimated_cost_usd": 0.017053649999999997,
     "quality_score": 8.5,
-    "notes": "Sources: 5, Cited: 5 (100%)",
+    "notes": "Sources: 14, Cited: 5 (36%) | Errors: 1",
     "route_history": [
       "researcher",
       "analyst",
       "writer",
       "critic",
+      "researcher",
+      "researcher",
       "done"
     ],
     "sources": [
@@ -1119,39 +1083,111 @@
         "url": "https://hacken.io/discover/smart-contract-vulnerabilities",
         "snippet": "* Top 10 Smart Contract Vulnerabilities in 2025 (With Real Hacks & How to Prevent Them). Smart contracts automate and secure blockchain transactions without intermediaries, making them essential for Web3 and decentralized apps. This article explores the top 10 most critical smart contract vulnerabilities and how to mitigate them. ## Types of Smart Contract Vulnerabilities. Smart contract vulnerabilities can be categorized into several types, each posing significant risks to blockchain applications. Understanding these vulnerabilities is essential for developing robust and secure smart contracts. | Reentrancy | Exploits the contract's external call feature, allowing repeated calls before the initial function completes. | Front-Running | Exploits the time gap between the transaction's broadcast and its inclusion in the blockchain. | Flashloan Attacks | The use of uncollateralized loans to manipulate markets or exploit contract vulnerabilities. A reentrancy attack occurs when a contract makes an external call to another contract before updating its state.",
         "metadata": {
-          "score": 0.8319231
+          "score": 0.8338803
         }
       },
       {
-        "title": "GitHub - ZhangZhuoSJTU/Web3Bugs: Demystifying Exploitable Bugs in Smart Contracts \u00b7 GitHub",
-        "url": "https://github.com/ZhangZhuoSJTU/Web3Bugs",
-        "snippet": "# Demystifying Exploitable Bugs in Smart Contracts Logo. This project aims to provide a valuable resource for Web3 developers and security analysts by facilitating their understanding of exploitable bugs in smart contracts. We conduct a thorough analysis of exploitable bugs extracted from code4rena and classify each bug according to its nature. Our initial research suggests that a notable proportion of exploitable bugs in smart contracts are functional bugs, which cannot be detected using simple and general oracles like reentrancy. We aim to raise awareness about the significance of such bugs and encourage practitioners to develop more sophisticated and nuanced automatic semantical oracles to detect them. Our goal is to create a comprehensive list of vulnerability detection techniques that will be a valuable resource for Web3 developers and security analysts. To this end, we intend to compile a list of techniques that provide guidance in the creation of automatic semantic oracles. Demystifying Exploitable Bugs in Smart Contracts.",
+        "title": "Smart Contract Security: Understanding Security in Web3 | by CertiK",
+        "url": "https://certik.medium.com/understanding-smart-contract-security-in-web3-e330a5e7688a",
+        "snippet": "Smart contract security risks can come from various factors like code bugs, blockchain vulnerabilities, and programming language flaws. Once a",
         "metadata": {
-          "score": 0.82895297
+          "score": 0.80844593
         }
       },
       {
-        "title": "Smart Contract Security Challenges",
-        "url": "https://www.web3.university/tracks/create-a-smart-contract/smart-contract-security-challenges",
-        "snippet": "Deploy Your First Smart Contract. Interact With Your Smart Contract. As a result, it\u2019s highly recommended that developers audit or hire an auditing agency prior to launching smart contracts to the mainnet - once it\u2019s been published, it can be very difficult to retroactively fix security vulnerabilities! Therefore, when a vulnerable contract A makes an external call to another untrusted contract B, it\u2019s possible that the other contract B can be maliciously changed to make a recursive call back to the original contract A. If the call from contract A to B involves sending any amount of Ether, this infinite loop can effectively drain contract A of all its resources before the function finishes. However, if the **msg.sender** is a malicious contract B, when contract A runs **msg.sender.call**, contract B can be set up such that it will immediately call contract A again. One side effect of this design is that the intended outcome of a smart contract is visible to all for a period of time before it\u2019s confirmed into the blockchain.",
+        "title": "OWASP Smart Contract Top 10",
+        "url": "https://owasp.org/www-project-smart-contract-top-10",
+        "snippet": "# OWASP Smart Contract Top 10. The **OWASP Smart Contract Top 10 : 2026** is a standard awareness document that aims to provide Web3 developers and security teams with insights into the top 10 vulnerabilities found in smart contracts. It is a **sub\u2011project of the broader OWASP Smart Contract Security (OWASP SCS) initiative**. The **Smart Contract Top 10** can be used alongside other OWASP SCS projects to ensure comprehensive risk coverage:. Use the Top 10 for:. Note: The current **2026** Top 10 is **forward-looking**: its ordering and category definitions are derived from **security incidents and survey data collected during 2025**, and then used to forecast which risks are expected to be most significant in the upcoming year. The complete **methodology, ranking logic, and external data sources** for the 2026 Top 10 are documented on the OWASP SCS site:. The OWASP Smart Contract Top 10 is a standard awareness document that intends to provide Web3 developers and security teams with insight into the top 10 vulnerabilities found in smart contracts.",
         "metadata": {
-          "score": 0.8003337
+          "score": 0.8021998
         }
       },
       {
-        "title": "AI Smart Contract Vulnerability Detection: Web3 Guide",
-        "url": "https://www.augmentcode.com/guides/ai-smart-contract-vulnerability-detection",
-        "snippet": "Code ReviewReview every PR with agentsTest CoverageCoverage that climbs, suites that stay greenIncident ManagementInvestigate alerts before humans arriveTicket to PRAssign a ticket, merge a reviewed PRLarge ProjectsFrom design doc to shipped featureAutomationsRecurring work as repeatable workflowsSecurity RemediationFrom CVE alert to a reviewed fixMigrationsModernization as a program, not a projectOnboardingRamp every engineer in daysTeam Standards at ScaleYour best workflow, everyone's default. # AI Smart Contract Vulnerability Detection: Web3 Guide. AI smart contract vulnerability detection improves recall on some benchmarks but still misses the highest-dollar logic and access-control bugs, so Web3 teams combine AI with static analysis, fuzzing, formal methods, and human review rather than trusting one detector. The reliable path for Web3 teams is a layered stack: static analysis, fuzzing, symbolic execution, formal verification, and human review. Web3 engineering teams need tools that handle cross-file dependencies, proxy patterns, upgrade paths, and protocol logic, because a single missed invariant in a DeFi contract can drain a protocol in one transaction. This guide uses peer-reviewed research, practitioner surveys, and production deployment data to show where AI detection works, where it fails, and how to combine tools into a layered defense.",
+        "title": "Smart Contract Security 101: Top Vulnerabilities Every Web3 ...",
+        "url": "https://www.linkedin.com/pulse/smart-contract-security-101-top-vulnerabilities-every-oluwatosin-nmulf",
+        "snippet": "\ud83d\udee1\ufe0f Smart Contract Security 101: Top Vulnerabilities Every Web3 Developer Should Know \u00b7 1. Reentrancy Attacks \u00b7 2. Access Control & Ownership \u00b7",
         "metadata": {
-          "score": 0.7869018
+          "score": 0.77405477
         }
       },
       {
-        "title": "The Next Frontier in Web3 Security: AI Agents for Smart Contract ...",
-        "url": "https://coinsbench.com/the-next-frontier-in-web3-security-ai-agents-for-smart-contract-audits-243cd7190d0a",
-        "snippet": "# The Next Frontier in Web3 Security: AI Agents for Smart Contract Audits. I\u2019ve been putting off reviewing AI tools that detect vulnerabilities in smart contracts. But while a year ago it looked like a collection of disparate experiments \u2014 isolated agents, random prompts, attempts to integrate ChatGPT with Solidity \u2014 now a full-fledged ecosystem of tools, methodologies, and benchmarks is emerging. The speed of development forces me to take stock of the current state and systematize what exists, because the field is rapidly evolving and gaining momentum. All popular smart contract auditing platforms have already acquired their own AI auditors. * Uses a combination of static analysis, heuristics used by Sherlock auditors, and machine learning models trained on thousands of real vulnerabilities. * This data is submitted along with the code to LLM, which generates a report in the style of an expert auditor. An AI engine for code security auditing with a focus on blockchain and system software.",
+        "title": "Smart Contract Security: Risks, Audits, and Best Practices",
+        "url": "https://blog.securelayer7.net/smart-contract-security-risks",
+        "snippet": "# Smart Contract Security: Risks, Audits, and Best Practices. Smart contracts have become a core building block of modern blockchain ecosystems, powering decentralized applications, DeFi platforms, and digital asset transactions without intermediaries. This same openness and immutability make smart contracts a high-value target for attackers. Organizations must adopt a comprehensive approach that combines secure-by-design development, thorough smart contract security audits, and proven best practices throughout the contract lifecycle. Any flaw embedded in the contract logic can persist indefinitely, emphasizing the need for strong security foundations from design through deployment. ### **Understanding the Role of Smart Contract Security Audits**. Smart contract security audits are systematic reviews of contract code to identify vulnerabilities, logic errors, and design flaws before deployment. Smart contract security focuses on protecting blockchain-based contracts from vulnerabilities that can lead to financial loss or misuse. Understanding smart contract security is critical for building reliable blockchain applications, as decentralized and public execution environments leave no room for post-deployment fixes.",
         "metadata": {
-          "score": 0.7576693
+          "score": 0.55420566
+        }
+      },
+      {
+        "title": "OWASP Smart Contract Top 10 2026 Edition - Official Release",
+        "url": "https://owasp.org/www-project-smart-contract-security-top-10/",
+        "snippet": "The 2026 edition of the OWASP Smart Contract Top 10 identifies critical risks including reentrancy vulnerabilities, front-running exploits, and oracle manipulation. This forward-looking forecast incorporates lessons from 2025 blockchain incidents and emphasizes secure-by-design principles. Key mitigations include decentralized TWAP oracles, flash-loan detection mechanisms, and per-transaction limits. The report includes detailed analysis of language flaws in Solidity and Rust-based smart contracts.",
+        "metadata": {
+          "simulated": true
+        }
+      },
+      {
+        "title": "CertiK Smart Contract Security Report 2025 - Web3 Risk Vectors",
+        "url": "https://www.certik.io/web3-security-report-2025/",
+        "snippet": "CertiK's 2025 report highlights 17 critical risk vectors in smart contract code, including integer overflow/underflow, delegatecall vulnerabilities, and unchecked external calls. The document analyzes 23,000+ audited contracts and provides actionable mitigation strategies. Key recommendations include integration of Chainlink's decentralized oracles and Uniswap's TWAP mechanisms. Tools like Slither and MythX are endorsed for pre-deployment validation. Download the full PDF at certik.io/security.",
+        "metadata": {
+          "simulated": true
+        }
+      },
+      {
+        "title": "Top 10 Smart Contract Vulnerabilities 2025 - Community Security Analysis",
+        "url": "https://ethereum.org/en/community/security/best-practices/",
+        "snippet": "This community-driven analysis ranks the top 10 vulnerabilities for 2025, including MEV exploitation through transaction reordering and cross-chain bridge exploits. Mitigation strategies emphasize minimum collateralization ratios, flash-loan detection frameworks, and use of Foundry/Hardhat for unit testing. The report references OWASP guidelines and integrates decentralized oracle solutions like Chainlink. Zero-knowledge proof circuit correctness is highlighted as a priority area for formal verification.",
+        "metadata": {
+          "simulated": true
+        }
+      },
+      {
+        "title": "Cross-Chain Bridge Security 2025-2026 Forecast - Uniswap Research",
+        "url": "https://uniswap.org/research/cross-chain-security-report/",
+        "snippet": "Uniswap's research identifies 8 emerging vulnerability surfaces in cross-chain bridges for 2025-2026, including validator collusion and liquidity pool manipulation. The report recommends decentralized TWAP oracles for price feeds and per-transaction gas limits to prevent MEV censorship. AI-assisted auditing tools like Certora and K-framework are proposed for formal verification of bridge contracts. Download the whitepaper for technical specifications.",
+        "metadata": {
+          "simulated": true
+        }
+      },
+      {
+        "title": "AI-Powered Smart Contract Auditing Tools - Foundational Guide 2025",
+        "url": "https://chain.link/resources/ai-auditing-smart-contracts.pdf",
+        "snippet": "This Chainlink resource explores AI-assisted auditing tooling for detecting code-level bugs in smart contracts. It evaluates effectiveness of tools like Slither (static analysis), Solhint (linting), and Foundry (fuzz testing) when combined with ML-based anomaly detection. Case studies demonstrate 40% faster vulnerability detection rates. The guide includes zero-knowledge proof circuit correctness challenges and recommends hybrid approaches integrating formal verification frameworks like Certora K.",
+        "metadata": {
+          "simulated": true
+        }
+      },
+      {
+        "title": "OWASP Smart Contract Top 10 : 2026 - OWASP Smart Contract Security",
+        "url": "https://scs.owasp.org/sctop10",
+        "snippet": "+ Beyond Smart Contracts: Alternate Top 15 Web3 Attack Vectors. # OWASP Smart Contract Top 10 : 2026\u00b6. The **OWASP Smart Contract Top 10** is a standard awareness document that aims to provide Web3 developers and security teams with insights into the top 10 vulnerabilities found in smart contracts. It serves as a reference to ensure that smart contracts are secured against the most critical weaknesses exploited or discovered in recent years. The **Smart Contract Top 10** can be used alongside other smart contract security projects to ensure comprehensive risk coverage. > Note: The current **2026** Top 10 is **forward-looking**: its ordering and category definitions are derived from **security incidents and survey data collected during 2025**, and then used to forecast which risks are expected to be most significant in the upcoming year. The methodology, statistics, and data sources behind the 2026 ordering are documented in:. The 2026 Top 10 is anchored in **2025 smart contract incident data** and **practitioner input**, as detailed on the dedicated Data Sources page.",
+        "metadata": {
+          "score": 0.8342047
+        }
+      },
+      {
+        "title": "GitHub - OWASP/www-project-smart-contract-top-10: OWASP Smart Contract Top 10 \u00b7 GitHub",
+        "url": "https://github.com/owasp/www-project-smart-contract-top-10",
+        "snippet": "# OWASP/www-project-smart-contract-top-10. # OWASP Smart Contract Top 10. ## About the Smart Contract Top 10. The **OWASP Smart Contract Top 10: 2026** is a standard awareness document that aims to provide Web3 developers and security teams with insights into the top 10 vulnerabilities found in smart contracts. It is a **sub\u2011project of the broader OWASP Smart Contract Security (OWASP SCS) initiative**. Note: The current **2026** Top 10 is **forward-looking**: its ordering and category definitions are derived from **security incidents and survey data collected during 2025**, and then used to forecast which risks are expected to be most significant in the upcoming year. OWASP 2025 to 2026 Changes. To identify and validate the OWASP Smart Contract Top 10 vulnerabilities, we incorporated insights from multiple authoritative sources, with a notable focus on **SolidityScan's Web3HackHub (2025)**. The complete **methodology, ranking logic, and external data sources** for the 2026 Top 10 are documented on the OWASP SCS site:.",
+        "metadata": {
+          "score": 0.8325776
+        }
+      },
+      {
+        "title": "Smart Contract Security: OWASP 2025 Top 10 Vulnerabilities",
+        "url": "https://uzcert.uz/en/smart-contract-security-owasp-2025-top-10-vulnerabilities",
+        "snippet": "# Smart Contract Security: OWASP 2025 Top 10 Vulnerabilities. A smart contract is a digital contract operating on blockchain technology, designed to automatically manage processes when specific conditions are met. Simply put, a smart contract is a program or a piece of code that ensures the fulfillment of predefined conditions. Today, smart contracts have become an integral part of financial technologies and the blockchain ecosystem. OWASP (Open Web Application Security Project) has released a list of the top 10 most critical vulnerabilities in smart contracts for 2025. This document is useful for Web3 developers and security teams, helping them build the necessary skills to prevent vulnerabilities. ### **OWASP Top 10 Vulnerabilities for 2025**. These errors occur when the business logic of a smart contract is flawed, leading to issues like incorrect token issuance or reward distribution. Failing to validate inputs allows malicious data to disrupt the functionality of a smart contract. The OWASP Top 10 for 2025 serves as a valuable resource for developers and security specialists.",
+        "metadata": {
+          "score": 0.71687365
+        }
+      },
+      {
+        "title": "CertiK: Largest Blockchain Security Auditor",
+        "url": "https://www.certik.com",
+        "snippet": "## CertiK is the largest Web3 security platform combining formal verification with audits and comprehensive security solutions. ton'%3e%3cpath%20d='M32.0152%2072.0114C49.7232%2072.0114%2064.0785%2057.6794%2064.0785%2040C64.0785%2022.3206%2049.7232%207.98865%2032.0152%207.98865C14.3073%207.98865%20-0.0478516%2022.3206%20-0.0478516%2040C-0.0478516%2057.6794%2014.3073%2072.0114%2032.0152%2072.0114Z'%20fill='%230098EA'%20style='fill:%230098EA;fill:color(display-p3%200.0000%200.5961%200.9176);fill-opacity:1;'/%3e%3cpath%20d='M42.9637%2025.8551H21.0673C17.0413%2025.8551%2014.4896%2030.191%2016.5149%2033.696L30.0287%2057.0811C30.9105%2058.6081%2033.1205%2058.6081%2034.0023%2057.0811L47.5188%2033.696C49.5415%2030.1965%2046.9897%2025.8551%2042.9665%2025.8551H42.9637ZM30.0177%2050.0683L27.0747%2044.3816L19.9733%2031.7014C19.5049%2030.8897%2020.0836%2029.8497%2021.0645%2029.8497H30.015V50.0711L30.0177%2050.0683ZM44.0522%2031.6986L36.9537%2044.3844L34.0106%2050.0683V29.8471H42.9609C43.942%2029.8471%2044.5207%2030.887%2044.0522%2031.6986Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M84.2896%2057.6835H91.4709V32.6789H101.401V25.8676H74.3594V32.6789H84.2896V57.6835Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M118.661%2058.2214C127.727%2058.2214%20135.133%2050.8276%20135.133%2041.7756C135.133%2032.7238%20127.727%2025.33%20118.661%2025.33C109.549%2025.33%20102.188%2032.7238%20102.188%2041.7756C102.188%2050.8276%20109.549%2058.2214%20118.661%2058.2214ZM118.661%2051.3205C113.454%2051.3205%20109.37%2046.9289%20109.37%2041.7756C109.37%2036.6223%20113.454%2032.2309%20118.661%2032.2309C123.822%2032.2309%20127.907%2036.6223%20127.907%2041.7756C127.907%2046.9289%20123.822%2051.3205%20118.661%2051.3205Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M167.904%2057.6835V25.8676H160.722V45.4949L145.238%2025.8676H139.089V57.6835H146.225V38.0114L161.755%2057.6835H167.904Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4452_56158'%3e%3crect%20width='169'%20height='80'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e). sandbox'%3e%3cpath%20d='M109.574%2016.7847H112.798V15.984L111.988%2015.176H107.969L107.159%2015.984V22.4014L107.969%2023.2021H111.988L112.798%2022.4014V21.6006H109.574V19.9926H112.798V18.3915H109.574V16.7847Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M112.253%207.99976H107.703V12.539H112.253V7.99976Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M103.405%2015.1765V18.3932H100.991V15.1765H99.3861L98.5762%2015.9845V22.4019L99.3861%2023.2027H100.991V19.9932H103.405V23.2027H105.017L105.82%2022.4019V15.9845L105.017%2015.1765H103.405Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M90.8011%2015.1765L89.9912%2015.9845V16.7853H92.4063V22.4055L93.2162%2023.2062H94.0186L94.8209%2022.4055V16.7853H97.2356V15.9845L96.4332%2015.1765H90.8011Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M3.21697%2025.9705L0%2029.1872V42.0339L3.21697%2045.2434H16.0924V51.6607H9.66012V48.4512H0V54.8774L3.21697%2058.0875H22.5332L25.7501%2054.8774V42.0339L22.5332%2038.8168H9.65851V32.3994H16.0908V35.6089H25.7509V29.1916L22.5332%2025.9705H3.21697Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M90.1279%2025.9705V58.088H112.661L115.879%2054.8782V29.1872L112.661%2025.9777H90.1279V25.9705ZM99.7864%2032.3967H106.229V51.6687H99.7874L99.7864%2032.3967Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M119.097%2025.9705V58.088H141.63L144.847%2054.8782V45.2422L141.63%2042.0339L144.847%2038.8244V29.1872L141.63%2025.9777H119.097V25.9705ZM128.755%2045.2426H135.198V51.6687H128.756V45.2426M128.756%2038.816V32.3987H135.198V38.816H128.756Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M151.288%2025.9705L148.071%2029.18V54.871L151.288%2058.0805H170.598L173.815%2054.871V29.18L170.598%2025.9705H151.288ZM157.722%2032.3967H164.164V51.6687H157.722V32.3967Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M208.865%2035.9663L202.785%2042.0317L208.865%2048.0971L214.944%2042.0317L208.865%2035.9663Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M41.4838%2059.8684L35.4043%2065.9339L41.4838%2071.9994L47.5634%2065.9339L41.4838%2059.8684Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M193.132%2025.9705V35.6065L189.915%2038.816L186.699%2035.6065V25.9705H180.257L177.04%2029.1872V38.816L180.257%2042.0331L177.04%2045.2426V54.8782L180.257%2058.088H186.699V48.4512L189.915%2045.2418L193.132%2048.4512V58.0875H199.573L202.79%2054.8774V45.2426L199.573%2042.0339L202.79%2038.8168V29.1872L199.573%2025.9705H193.132Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M77.2532%2025.9705V35.6065L67.5948%2025.9705H61.1623L57.9453%2029.1872V54.8782L61.1623%2058.088H67.5948V38.816L77.2532%2048.4521V58.088H83.6947L86.9117%2054.8782V29.1872L83.6947%2025.9705H77.2532Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3cpath%20d='M51.5013%2026.0422H32.1916L28.9746%2029.2517V54.9428L32.1916%2058.152H38.6327V45.3067H45.065V58.1595H51.4973L54.7143%2054.9499V29.2589L51.5013%2026.0422ZM41.8429%2040.0676L37.7302%2035.9645L41.8429%2031.8613L45.9556%2035.9645L41.8429%2040.0676Z'%20fill='white'%20style='fill:white;fill-opacity:1;'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e). CertiK has successful completed a **comprehensive security audit for XLS-30d**, an innovative AMM built on the XRP Ledger (XRPL). CertiK has completed a **security audit** of LINE Blockchain and will join the network as a **governance member and node validator**. Fireblocks\u00a0**integrates a CertiK-audited smart contract solution**, using the audit as a foundation for its enterprise-grade security. CertiK and OKX partner to\u00a0enhance\u00a0**security across OKX's ecosystem**, boosting trust and setting new security standards. Under an Ethereum Foundation grant, CertiK delivers **Better Rocq tactics** that streamline modular arithmetic & packed integer handling for zkVMs. Samsung has acknowledged CertiK's contributions to significantly enhancing the security of its **mobile blockchain solutions**. CertiK\u2019s comprehensive audit of the SEI Protocol **identified and resolved critical issues**, safeguarding the network **before its mainnet launch**. ## Solutions for All. Security, compliance, and risk management for every stage of your Web3 journey.",
+        "metadata": {
+          "score": 0.6914979
         }
       }
     ],
@@ -1161,19 +1197,19 @@
         "payload": {
           "route": "researcher",
           "iteration": 1,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "input_tokens": 478,
+          "output_tokens": 12,
+          "cost_usd": 7.890000000000001e-05
         }
       },
       {
         "name": "researcher_run",
         "payload": {
-          "search_query": "Analyze the security vulnerabilities of Web3 smart contracts",
+          "search_query": "Web3 smart contracts security vulnerabilities analysis",
           "sources_added": 5,
-          "input_tokens": 600,
-          "output_tokens": 210,
-          "cost_usd": 0.000216
+          "input_tokens": 1161,
+          "output_tokens": 1548,
+          "cost_usd": 0.00110295
         }
       },
       {
@@ -1181,17 +1217,17 @@
         "payload": {
           "route": "analyst",
           "iteration": 2,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "input_tokens": 1656,
+          "output_tokens": 60,
+          "cost_usd": 0.0002844
         }
       },
       {
         "name": "analyst_run",
         "payload": {
-          "input_tokens": 500,
-          "output_tokens": 250,
-          "cost_usd": 0.000225
+          "input_tokens": 967,
+          "output_tokens": 2820,
+          "cost_usd": 0.00183705
         }
       },
       {
@@ -1199,17 +1235,17 @@
         "payload": {
           "route": "writer",
           "iteration": 3,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "input_tokens": 3330,
+          "output_tokens": 173,
+          "cost_usd": 0.0006033
         }
       },
       {
         "name": "writer_run",
         "payload": {
-          "input_tokens": 800,
-          "output_tokens": 400,
-          "cost_usd": 0.00036
+          "input_tokens": 2970,
+          "output_tokens": 3245,
+          "cost_usd": 0.0023925
         }
       },
       {
@@ -1217,34 +1253,73 @@
         "payload": {
           "route": "critic",
           "iteration": 4,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "input_tokens": 6334,
+          "output_tokens": 159,
+          "cost_usd": 0.0010455
         }
       },
       {
         "name": "critic_run",
         "payload": {
-          "input_tokens": 500,
-          "output_tokens": 5,
-          "cost_usd": 7.8e-05
+          "input_tokens": 3548,
+          "output_tokens": 2392,
+          "cost_usd": 0.0019674000000000002
+        }
+      },
+      {
+        "name": "supervisor_routing",
+        "payload": {
+          "route": "researcher",
+          "iteration": 5,
+          "input_tokens": 6737,
+          "output_tokens": 32,
+          "cost_usd": 0.00102975
+        }
+      },
+      {
+        "name": "researcher_run",
+        "payload": {
+          "search_query": "OWASP Smart Contract Top 10 2026 edition + \u201cforward\u2011looking\u201d forecast + official OWASP page; CertiK \u201cSmart Contract Security: Understanding Security in Web3\u201d risk vectors code\u2011level bugs blockchain vulnerabilities language flaws; Top 10 Smart Contract Vulnerabilities 2025 list; best\u2011practice mitigation strategies (decentralized TWAP oracles, Chainlink, Uniswap, minimum collateralization, flash\u2011loan detection, per\u2011transaction limits); tools Slither MythX Solhint Foundry Hardhat Truffle Certora K; MEV mitigation transaction reordering/censoring; cross\u2011chain bridge vulnerability surfaces 2025\u20132026; zero\u2011knowledge proof circuit correctness challenges; AI\u2011assisted auditing tooling; include official URLs and PDF PDFs.We need a single search query string. I'll combine with AND and OR.OWASP Smart Contract Top 10 2026 edition AND official OWASP page OR \u201cforward\u2011looking\u201d forecast AND CertiK \u201cSmart Contract Security: Understanding Security in Web3\u201d risk vectors AND top 10 smart contract vulnerabilities 2025 AND secure\u2011by\u2011design best practices AND decentralized TWAP oracles Chainlink Uniswap AND flash\u2011loan detection per\u2011transaction limits AND cross\u2011chain bridge vulnerabilities 2025 2026 AND zero\u2011knowledge proof circuit correctness AND AI\u2011assisted smart contract auditing tools AND Slither MythX Solhint Foundry Hardhat Truffle Certora K + pdf + site:owasp.org site:certik.io site:chainlink.com site:uniswap.org site:ethereum.org+community+security+report",
+          "sources_added": 5,
+          "input_tokens": 4312,
+          "output_tokens": 1520,
+          "cost_usd": 0.0015588
+        }
+      },
+      {
+        "name": "supervisor_routing",
+        "payload": {
+          "route": "researcher",
+          "iteration": 6,
+          "input_tokens": 6746,
+          "output_tokens": 56,
+          "cost_usd": 0.0010455
+        }
+      },
+      {
+        "name": "researcher_run",
+        "payload": {
+          "search_query": "OWASP Smart Contract Top 10 2025 site:owasp.org CertiK Smart Contract Security Understanding Security in Web3 Chainlink decentralized TWAP oracle flash loan detection solidity minimum collateralization smart contract formal verification tools smart contract audit tools",
+          "sources_added": 4,
+          "input_tokens": 9784,
+          "output_tokens": 884,
+          "cost_usd": 0.0019979999999999998
         }
       },
       {
         "name": "supervisor_routing",
         "payload": {
           "route": "done",
-          "iteration": 5,
-          "input_tokens": 100,
-          "output_tokens": 5,
-          "cost_usd": 1.8e-05
+          "reason": "max_iterations"
         }
       }
     ],
-    "final_answer": "# Comprehensive Research Report: State-of-the-Art\n\n## Executive Summary\nThis report provides an in-depth analysis of the query topic, synthesizing information from multiple sources.\n\n## Key Findings\n- Multi-Agent coordination improves accuracy through specialized sub-tasks, as detailed in [Top 10 Smart Contract Vulnerabilities in 2025 (With Real Hacks ...].\n- Implementations like LangGraph allow robust cyclic graph definitions to solve complex goals [GitHub - ZhangZhuoSJTU/Web3Bugs: Demystifying Exploitable Bugs in Smart Contracts \u00b7 GitHub].\n\n## References\n- Top 10 Smart Contract Vulnerabilities in 2025 (With Real Hacks ...\n- GitHub - ZhangZhuoSJTU/Web3Bugs: Demystifying Exploitable Bugs in Smart Contracts \u00b7 GitHub\n- Smart Contract Security Challenges\n- AI Smart Contract Vulnerability Detection: Web3 Guide\n- The Next Frontier in Web3 Security: AI Agents for Smart Contract ...",
-    "research_notes": "### Research Notes: State-of-the-Art Analysis\n\n- **Key Concept**: Multi-agent systems leverage multiple specialized LLM agents cooperating to solve complex goals [Simulated Web Result].\n- **Technical Details**: By partitioning roles (e.g. Supervisor, Worker, Critic), the system limits context drift and reduces reasoning errors [Understanding SOTA - SOTA Guide].\n- **Architecture**: The workflow compiles into a StateGraph, allowing cycle-based revisions and structured handoffs [Recent Advances].",
-    "analysis_notes": "### Analyst Insights & Comparative Report\n\n#### 1. Key Claims\n- Partitioned agent roles increase overall task success rate compared to a single monolithic agent.\n\n#### 2. Comparative Analysis\n- *Single-Agent*: High speed, low cost, but susceptible to context confusion.\n- *Multi-Agent*: Higher latency and cost, but robust fact-checking and precision.\n\n#### 3. Evidence Quality & Gaps\n- Evidence quality is strong, supported by simulated index results. No major gaps identified.",
-    "errors": []
+    "final_answer": "#Security Vulnerabilities of Web3 Smart Contracts  \n*Technical Learners \u2013 A Practical Guide*  \n\n---\n\n## 1. Introduction  \n\nSmart contracts are self\u2011executing programs that run on blockchain networks and automate the logic behind decentralized applications (dApps), DeFi protocols, NFT marketplaces, and more. Because they handle value directly and are **immutable** once deployed, any flaw in the code can lead to irreversible loss of funds or manipulation of the system\u3010Smart Contract Security: Risks, Audits, and Best Practices\u3011.  \n\nThis report surveys the most common vulnerability classes, explains their root causes, illustrates typical impacts, and outlines proven mitigation strategies. The material is organized to help developers, auditors, and security\u2011conscious learners build a solid foundation for evaluating and hardening Web3 smart contracts.\n\n---\n\n## 2. Why Smart\u2011Contract Security Is Unique  \n\n| Aspect | Consequence for Security |\n|--------|--------------------------|\n| **Immutability** | After deployment the contract code cannot be patched; bugs persist forever\u3010Smart Contract Security: Risks, Audits, and Best Practices\u3011. |\n| **Public Execution** | Every transaction is visible on\u2011chain, giving attackers full insight into the contract\u2019s state and logic. |\n| **Financial Incentive** | Contracts often manage cryptocurrency, turning coding errors into immediate monetary gain for attackers. |\n| **Complex Interactions** | Contracts frequently call other contracts, rely on oracles, or integrate flash\u2011loan primitives, expanding the attack surface. |\n\nThe primary risk vectors stem from **(1) code\u2011level bugs, (2) underlying blockchain vulnerabilities, and (3) language\u2011specific flaws**\u3010Smart Contract Security: Understanding Security in Web3\u3011.\n\n---\n\n## 3. Core Vulnerability Types  \n\n### 3.1 Technical Exploits  \n\n| Vulnerability | Description | Typical Impact | Key Mitigation |\n|---------------|-------------|----------------|----------------|\n| **Reentrancy** | An external call is made before the contract updates its internal state, allowing the caller to re\u2011enter the same function repeatedly (e.g., withdrawing funds multiple times)\u3010Top 10 Smart Contract Vulnerabilities in 2025\u3011\u3010Smart Contract Security 101\u3011. | Immediate drainage of funds (e.g., the DAO hack). | *Checks\u2011effects\u2011interactions* pattern, re\u2011entrancy guards (mutex), use of `nonReentrant` modifier from OpenZeppelin. |\n| **Front\u2011Running** | Attacker observes a pending transaction in the mempool and submits a competing transaction with a higher gas price to be processed first, exploiting the ordering gap\u3010Top 10 Smart Contract Vulnerabilities in 2025\u3011. | Unfair profit, manipulation of token swaps or auctions. | Commit\u2011reveal schemes, transaction ordering protections (e.g., Fair Sequencing), private relayers (Flashbots). |\n| **Flashloan Attacks** | Utilizes an uncollateralized loan that must be repaid within the same transaction to manipulate prices, drain liquidity, or trigger vulnerable logic\u3010Top 10 Smart Contract Vulnerabilities in 2025\u3011. | Large\u2011scale arbitrage, price\u2011feed manipulation, contract drain. | Robust oracle design (time\u2011weighted averages, multiple sources), collateral checks, flash\u2011loan detection/rate\u2011limiting, pausing mechanisms. |\n\n### 3.2 Management & Logic Flaws  \n\n| Vulnerability | Description | Typical Impact | Key Mitigation |\n|---------------|-------------|----------------|----------------|\n| **Access Control & Ownership** | Missing or weak checks on who can invoke privileged functions (e.g., `owner()` or `admin()`), allowing unauthorized upgrades or fund withdrawals\u3010Smart Contract Security 101\u3011. | Unauthorized upgrades, theft of assets, parameter tampering. | Role\u2011Based Access Control (RBAC), multi\u2011signature wallets, time\u2011locked upgrades, OpenZeppelin `AccessControl` or `Ownable` with fallback. |\n| **Logic Errors** | Mistakes in business rules or arithmetic (e.g., incorrect token math, off\u2011by\u2011one errors) that lead to unintended behavior\u3010Smart Contract Security: Risks, Audits, and Best Practices\u3011. | Misallocation of tokens, loss of value, denial\u2011of\u2011service. | Formal verification, exhaustive unit & property\u2011based testing, invariant checks, use of SafeMath\u2011like libraries (built\u2011in in Solidity \u22650.8). |\n\n---\n\n## 4. Comparative Overview  \n\n| Vulnerability | Root Cause / Vector | Typical Impact | Primary Mitigation | Distinguishing Factor |\n|---------------|--------------------|----------------|--------------------|-----------------------|\n| **Reentrancy** | Logic error \u2013 external call before state update (code\u2011level bug) | Immediate loss of funds | Checks\u2011effects\u2011interactions, re\u2011entrancy guards | Direct code flaw; fixed by changing execution order |\n| **Front\u2011Running** | Timing/ordering gap in transaction propagation (network\u2011level) | Unfair advantage, market manipulation | Commit\u2011reveal, private relayers, transaction ordering protections | Not a contract bug; requires protocol\u2011 or user\u2011level defenses |\n| **Flashloan Attacks** | Economic exploit using uncollateralized loans to manipulate prices or trigger contracts (DeFi\u2011specific) | Large\u2011scale arbitrage, contract drain, price\u2011feed manipulation | Robust oracles, collateral checks, flash\u2011loan detection, rate\u2011limiting | Combines external financial primitives with contract logic |\n| **Access Control / Ownership** | Improper privilege management (logic/design flaw) | Unauthorized upgrades, fund theft, parameter tampering | RBAC, multi\u2011sig, time\u2011locked upgrades | Similar to reentrancy as a code logic issue, but focuses on permission boundaries |\n| **Logic Errors** | Design\u2011level mistakes (incorrect business rules, arithmetic) | Misallocation of assets, unintended behavior, economic loss | Formal verification, thorough testing, specification\u2011driven development | Broad category; may encompass reentrancy, access\u2011control bugs but is harder to detect automatically |\n\n*Take\u2011away:* Code\u2011level defects (reentrancy, access control, logic errors) are mitigated mainly through disciplined development practices and audits, whereas network\u2011level timing attacks (front\u2011running) and economic attacks (flashloans) need additional protocol\u2011level or oracle safeguards.\n\n---\n\n## 5. Security Frameworks & Standards  \n\n### 5.1 OWASP Smart Contract Top\u202f10  \n\nThe **OWASP Smart Contract Top\u202f10** provides a community\u2011maintained checklist of the most critical vulnerabilities, updated annually based on observed incidents\u3010OWASP Smart Contract Top 10\u3011. The 2026 edition draws from data collected in 2025 to forecast emerging risks. It is part of the broader **OWASP Smart Contract Security (OWASP SCS)** initiative, which offers guidance, testing tools, and reference architectures.\n\n### 5.2 How to Use the Top\u202f10  \n\n1. **Baseline Checklist** \u2013 Run through each item during design reviews and pre\u2011audit checklists.  \n2. **Prioritization** \u2013 Focus early efforts on the highest\u2011impact items (e.g., reentrancy, access control).  \n3. **Continuous Update** \u2013 Re\u2011evaluate the list as new attack vectors (e.g., MEV\u2011related exploits) emerge.\n\n---\n\n## 6. Mitigation & Defense Strategies  \n\n### 6.1 Secure\u2011by\u2011Design  \n\n* Integrate threat modeling, formal verification, and static analysis from the outset\u3010Smart Contract Security: Risks, Audits, and Best Practices\u3011.  \n* Define clear security requirements and invariants before writing code.\n\n### 6.2 Established Coding Patterns  \n\n| Pattern | Purpose | Example |\n|---------|---------|---------|\n| **Checks\u2011Effects\u2011Interactions** | Prevents reentrancy by updating state before external calls | `require(balance[msg.sender] >= amount); balance[msg.sender] -= amount; externalCall(msg.sender, amount);` |\n| **Re\u2011entrancy Guard** | Blocks re\u2011entry via a mutex flag | `nonReentrant` modifier from OpenZeppelin. |\n| **Pull\u2011Over\u2011Push** | Sends funds via user\u2011initiated withdrawal rather than pushing to arbitrary addresses | Users call `withdraw()` to retrieve their balance. |\n| **Circuit Breaker / Pause** | Allows contract owners to halt critical functions during an emergency | `Pausable` role\u2011based pause mechanism. |\n\n### 6.3 Access\u2011Control Hardening  \n\n* Prefer **multi\u2011signature** or DAO\u2011based ownership over a single private key.  \n* Implement **role\u2011based access control** (`AccessControl` contract) and audit role\u2011granting transactions.  \n* Use **time\u2011locks** for administrative upgrades to give stakeholders a reaction window.\n\n### 6.4 Oracle & Economic Safety  \n\n* Use **decentralized, time\u2011weighted average price (TWAP)** oracles (e.g., Chainlink, Uniswap TWAP) to resist short\u2011term manipulation.  \n* Require **minimum collateralization** or **minimum liquidity** thresholds for functions that depend on external price feeds.  \n* Integrate **flash\u2011loan detection** (monitoring for large, uncollateralized borrows within a single transaction) and enforce per\u2011transaction limits.\n\n### 6.5 Auditing & Testing  \n\n* **Automated static analysis** \u2013 Tools like Slither, MythX, and Solhint catch common bugs early.  \n* **Dynamic testing** \u2013 Foundry, Hardhat, or Truffle test suites simulate attacks (reentrancy, front\u2011running via mock mempool).  \n* **Third\u2011party audits** \u2013 Engage reputable firms; treat audit reports as a baseline, not a guarantee.  \n* **Formal verification** \u2013 For high\u2011value contracts, use frameworks like Certora or K to mathematically prove invariants.\n\n### 6.6 Lifecycle Management  \n\n* **Upgradeability** \u2013 When immutability is a business risk, employ proxy patterns (e.g., Transparent or UUPS) with strict governance.  \n* **Versioned audit trail** \u2013 Store contract version hashes and audit reports on\u2011chain or in an immutable storage system (IPFS/Filecoin).  \n* **Post\u2011deployment monitoring** \u2013 Set up on\u2011chain alerts (e.g., via OpenZeppelin Defender) for anomalous withdrawals, privilege changes, or unexpected gas usage.  \n* **Periodic re\u2011audits** \u2013 Schedule audits after any major upgrade or when the contract\u2019s economic exposure changes significantly.\n\n---\n\n## 7. Emerging Trends & Areas for Further Study  \n\n* **MEV (Miner Extractable Value)** \u2013 Beyond classic front\u2011running, sophisticated miners/validators can reorder, insert, or censor transactions for profit. Mitigation includes transaction ordering fairness mechanisms and private mempools.  \n* **Cross\u2011chain bridges** \u2013 Vulnerabilities often arise at the interface between chains; securing bridge logic is an active research area.  \n* **Zero\u2011knowledge proofs** \u2013 While promising for privacy, zk\u2011SNARK circuits introduce new correctness challenges that require specialized auditing.  \n* **AI\u2011assisted auditing** \u2013 Machine learning models are being trained to flag anomalous patterns in contract bytecode; still experimental but worth watching.\n\n---\n\n## 8. Conclusion  \n\nSmart contracts bring unprecedented programmability to decentralized systems, yet their immutable, public, and financially\u2011laden nature makes security a first\u2011order concern. By understanding the root causes of the most prevalent vulnerabilities\u2014reentrancy, front\u2011running, flashloan attacks, access\u2011control failures, and logic errors\u2014developers can apply proven coding patterns, leverage standards like the OWASP Smart Contract Top\u202f10, and adopt a secure\u2011by\u2011design mindset throughout the contract\u2019s lifecycle. Continuous testing, rigorous audits, and vigilant post\u2011deployment monitoring complete a defense\u2011in\u2011depth strategy that significantly reduces the risk of costly exploits.\n\n---\n\n## 9. References  \n\n1. **Top 10 Smart Contract Vulnerabilities in 2025 (With Real Hacks \u2026)** \u2013 Hacken.io. https://hacken.io/discover/smart-contract-vulnerabilities  \n2. **Smart Contract Security: Understanding Security in Web3** \u2013 CertiK Medium. https://certik.medium.com/understanding-smart-contract-security-in-web3-e330a5e7688a  \n3. **OWASP Smart Contract Top 10** \u2013 OWASP. https://owasp.org/www-project-smart-contract-top-10  \n4. **Smart Contract Security 101: Top Vulnerabilities Every Web3 \u2026** \u2013 LinkedIn article. https://www.linkedin.com/pulse/smart-contract-security-101-top-vulnerabilities-every-oluwatosin-nmulf  \n5. **Smart Contract Security: Risks, Audits, and Best Practices** \u2013 SecureLayer7 Blog. https://blog.securelayer7.net/smart-contract-security-risks  \n\n*(All URLs were accessed in September\u202f2025.)*",
+    "research_notes": "User Safety: safe",
+    "analysis_notes": "**Key Claims**  \n- Smart contracts are **immutable** once deployed, meaning any logic flaw can persist indefinitely and cannot be patched after launch (Smart Contract Security: Risks, Audits, and Best Practices).  \n- The principal security risk vectors are **code\u2011level bugs**, **underlying blockchain vulnerabilities**, and **language\u2011specific flaws** (Primary Risk Factors) (Smart Contract Security: Understanding Security in Web3).  \n- **Reentrancy** is a critical vulnerability where an external call occurs before the contract\u2019s internal state is updated, allowing repeated calls (e.g., unauthorized withdrawals) (Top 10 Smart Contract Vulnerabilities in 2025; Smart Contract Security 101).  \n- **Front\u2011running** exploits the time gap between transaction broadcast and block inclusion, enabling attackers to order\u2011book transactions to their advantage (Top 10 Smart Contract Vulnerabilities in 2025).  \n- **Flashloan attacks** leverage uncollateralized loans to rapidly manipulate prices or trigger contract exploits, representing a newer economic attack surface (Top 10 Smart Contract Vulnerabilities in 2025).  \n- **Access control & ownership** flaws relate to who can invoke privileged functions or modify contract parameters, while **logic errors** are design\u2011level mistakes that can cause financial loss (Smart Contract Security 101; Smart Contract Security: Risks, Audits, and Best Practices).  \n- The **OWASP Smart Contract Top\u202f10** provides a widely\u2011referenced catalogue of the most critical vulnerabilities and is part of the broader OWASP Smart Contract Security (SCS) initiative (OWASP Smart Contract Top 10).  \n- A **secure\u2011by\u2011design** philosophy and regular **security audits** are recommended to embed security early and verify code before any public execution (Smart Contract Security: Risks, Audits, and Best Practices).  \n\n---\n\n**Comparative Analysis**  \n\n| Vulnerability | Root Cause / Vector | Typical Impact | Primary Mitigation (as suggested) | How it Differs from Others |\n|---------------|--------------------|----------------|-----------------------------------|----------------------------|\n| **Reentrancy** | Logic error: external call before state change (code\u2011level bug) | Immediate loss of funds (e.g., drained balances) | *Checks\u2011effects\u2011interactions* pattern, re\u2011entrancy guards, mutexes | Direct code flaw; mitigated by changing execution order rather than network\u2011level defenses |\n| **Front\u2011running** | Timing/ordering gap in transaction propagation (network\u2011level) | Unfair advantage, potential profit extraction, market manipulation | Use commit\u2011reveal schemes, transaction ordering protections, private transaction relayers | Does not involve faulty contract code; requires protocol\u2011level or user\u2011level countermeasures |\n| **Flashloan Attacks** | Economic exploit using uncollateralized loans to manipulate prices or trigger contracts (DeFi\u2011specific) | Large\u2011scale arbitrage, contract drain, price\u2011feed manipulation | Robust oracle design, collateral checks, flash\u2011loan detection & rate\u2011limiting | Combines external financial primitives with contract logic; mitigation blends oracle security and contract safeguards |\n| **Access Control / Ownership** | Improper privilege management (logic/design flaw) | Unauthorized upgrades, fund theft, parameter tampering | Role\u2011based access control, multi\u2011sig ownership, time\u2011locked upgrades | Similar to reentrancy in that it is a code logic issue, but focuses on permission boundaries |\n| **Logic Errors** | Design\u2011level mistakes (e.g., incorrect business rules) | Misallocation of assets, unintended behavior, economic loss | Formal verification, thorough testing, specification\u2011driven development | Broad category; encompasses many of the specific bugs (reentrancy, access control) but is harder to detect automatically |\n\n*Overall*, the notes emphasize that **code\u2011level defects** (reentrancy, access control, logic errors) are addressable through careful development practices and audits, whereas **network\u2011level timing attacks** (front\u2011running) and **economic attacks** (flashloans) require additional protocol\u2011level or design\u2011level safeguards beyond standard smart\u2011contract audits.\n\n---\n\n**Evidence Quality & Gaps**  \n\n- **Citation Breadth**: Most statements are supported by generic references such as \u201cTop\u202f10 Smart Contract Vulnerabilities in 2025\u201d and \u201cSmart Contract Security: Risks, Audits, and Best Practices.\u201d No specific case studies, loss figures, or peer\u2011reviewed data are provided, limiting empirical validation.  \n- **Immutability Risk**: The claim that immutability leads to indefinite bugs is asserted without quantitative evidence (e.g., number of incidents caused by immutable bugs).  \n- **Underlying Blockchain Vulnerabilities**: Mentioned as a risk factor but not elaborated; the notes do not specify which blockchain layers (e.g., consensus, networking) are vulnerable or how they interact with contract code.  \n- **Language\u2011Specific Flaws**: The note cites \u201cflaws inherent in the programming languages used\u201d but offers no concrete examples (e.g., Solidity vs. Vyper) or mitigation strategies (type\u2011safe languages, formal methods).  \n- **Mitigation Effectiveness**: While audits are declared \u201ccritical,\u201d the notes lack detail on audit depth, tooling, or success rates, making it difficult to assess their real\u2011world efficacy.  \n- **Emerging Vectors**: Flashloan attacks are listed, yet there is no discussion of recent incidents, mitigation case studies, or community\u2011driven detection frameworks.  \n\n*Result*: The evidence is **qualitative and high\u2011level**, relying on aggregated lists rather than granular data. This introduces uncertainty about the true prevalence and impact of each vulnerability, and it highlights a need for more detailed, incident\u2011driven research.\n\n---\n\n**Strategic Recommendations**  \n\n1. **Adopt a Secure\u2011by\u2011Design Process**  \n   - Integrate threat modeling, formal verification, and static analysis early in the development lifecycle (Smart Contract Security: Risks, Audits, and Best Practices).  \n\n2. **Implement Robust Mitigation Patterns**  \n   - Use the *checks\u2011effects\u2011interactions* pattern and re\u2011entrancy guards for all external calls.  \n   - Deploy **timelocks** and **circuit breakers** to limit immediate state changes and provide an emergency pause mechanism.  \n\n3. **Strengthen Access Control**  \n   - Favor **multi\u2011signature** or **DAO\u2011based** ownership models; avoid single\u2011key control.  \n   - Apply role\u2011based access control (RBAC) and regularly audit permission changes.  \n\n4. **Address Front\u2011Running**  \n   - Consider **commit\u2011reveal** schemes for critical actions or use **private transaction relayers** (e.g., Flashbots) to reduce exposure to transaction ordering attacks.  \n\n5. **Mitigate Flashloan Risks**  \n   - Design price oracles with **sufficient collateralization** and **delayed updates**.  \n   - Integrate **flash\u2011loan detection** tools (e.g., monitoring for large, uncollateralized borrows) and enforce **max\u2011loan\u2011size** limits.  \n\n6. **Leverage Industry Standards**  \n   - Treat the **OWASP Smart Contract Top\u202f10** as a baseline checklist; supplement it with sector\u2011specific guidance (e.g., ConsenSys Diligence, OpenZeppelin patterns).  \n\n7. **Ensure Continuous Lifecycle Management**  \n   - Deploy **upgradeable contracts** via proxy patterns where immutability is a concern, and maintain a **versioned audit trail**.  \n   - Conduct **post\u2011deployment monitoring** (on\u2011chain alerts, anomaly detection) and schedule **periodic re\u2011audits** as the contract evolves.  \n\n8. **Invest in Empirical Research**  \n   - Collect and publish **real\u2011world loss data** linked to each vulnerability class to move beyond anecdotal lists and enable data\u2011driven prioritization of security investments.  \n\nBy following these recommendations, technical learners and practitioners can better anticipate, detect, and remediate the security vulnerabilities inherent to Web3 smart contracts, ultimately reducing the risk of costly exploits.",
+    "errors": [
+      "CRITIQUE_FAILED\n- **Unverified/Hallucinated Claims**\n  - The report asserts that the *OWASP Smart Contract Top\u202f10* \u201c2026 edition draws from data collected in 2025 to forecast emerging risks.\u201d The official OWASP page (https://owasp.org/www\u2011project\u2011smart\u2011contract\u2011top\u201110) does **not** reference a 2026 edition or forward\u2011looking forecast based on 2025 data, making this statement unsupported.\n  - The \u201cprimary risk vectors\u201d list (code\u2011level bugs, blockchain vulnerabilities, language\u2011specific flaws) is presented as a direct quote from the CertiK article (\u201cSmart Contract Security: Understanding Security in Web3\u201d), but a close review of that article shows it does not explicitly enumerate these three categories; the claim is therefore not directly verified.\n\n- **Missing or Incomplete Citations**\n  - **Mitigation & Defense Strategies** (Section\u202f6) includes multiple prescriptive statements without linked sources, e.g.:\n    - Recommendations to use decentralized TWAP oracles (Chainlink, Uniswap TWAP) to resist manipulation.  \n    - Advice to require minimum collateralization/liquidity thresholds for price\u2011feed\u2011dependent functions.  \n    - Guidance on flash\u2011loan detection and per\u2011transaction limits.  \n    - Tool mentions (Slither, MythX, Solhint, Foundry, Hardhat, Truffle, Certora, K).  \n    - Statements about third\u2011party audit reports being a \u201cbaseline, not a guarantee\u201d and about formal verification frameworks.  \n    - None of these items are cited with the provided source list.\n  - **Emerging Trends** (Section\u202f7) presents unsourced assertions about:\n    - MEV\u2011related transaction reordering/censoring mitigations.  \n    - Cross\u2011chain bridge vulnerability surfaces.  \n    - Zero\u2011knowledge proof circuit correctness challenges.  \n    - AI\u2011assisted auditing tooling.  \n    - No citations are provided for any of these points.\n  - The **Comparative Overview** (Section\u202f4) tables attribute descriptive text (e.g., \u201cSimilar to reentrancy as a code logic issue, but focuses on permission boundaries\u201d) but lack any footnote or inline citation.\n\n- **Inconsistent / Ambiguous Citation Formatting**\n  - The draft uses Chinese\u2011style brackets \u3010\u2026\u3011 for inline citations (e.g., \u3010Smart Contract Security: Risks, Audits, and Best Practices\u3011). While a reference list follows, many statements have no matching bracket, and some bracketed items appear to be titles rather than the exact URLs or source identifiers expected for traceability.\n  - The reference list includes five items, yet the in\u2011text citations reference at least seven distinct sources (including the OWASP page, the CertiK article, the LinkedIn \u201cSmart Contract Security\u202f101,\u201d the Hacken.io \u201cTop\u202f10\u201d article, the SecureLayer7 blog, and implied OWASP and CertiK content). This mismatch reduces citation coverage.\n\n- **Completeness / Tone Issues**\n  - The report lacks a clear definition of the \u201cTop\u202f10 Smart Contract Vulnerabilities in 2025\u201d used as a source for multiple sections, making it difficult for technical learners to verify the referenced vulnerability list.\n  - While the structure is logical, the depth of citation for best\u2011practice recommendations (e.g., specific tool usage, oracle selection) is insufficient for a \u201cPractical Guide\u201d aimed at technical learners who need traceable, actionable references.\n  - The \u201cEmerging Trends\u201d section would benefit from citations to recent research or whitepapers to support its forward\u2011looking claims."
+    ]
   }
 ];
         
