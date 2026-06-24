@@ -2,6 +2,11 @@
 
 import logging
 from langgraph.graph import END, StateGraph
+try:
+    from langfuse.decorators import observe
+except ImportError:
+    def observe(*args, **kwargs):
+        return lambda f: f
 
 from multi_agent_research_lab.agents import (
     AnalystAgent,
@@ -92,6 +97,7 @@ class MultiAgentWorkflow:
         # Compile graph
         return workflow.compile()
 
+    @observe(name="multi_agent_workflow")
     def run(self, state: ResearchState) -> ResearchState:
         """Execute the graph and return final state."""
         logger.info("Starting MultiAgentWorkflow.run...")

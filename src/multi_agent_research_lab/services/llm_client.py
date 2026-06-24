@@ -7,7 +7,10 @@ import json
 import logging
 import re
 from dataclasses import dataclass
-from openai import OpenAI
+try:
+    from langfuse.openai import OpenAI
+except ImportError:
+    from openai import OpenAI
 
 from multi_agent_research_lab.core.config import get_settings
 

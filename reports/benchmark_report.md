@@ -6,10 +6,10 @@ This report compares the performance, latency, cost, and output quality of the S
 
 | Run Name | Latency (s) | Estimated Cost (USD) | Quality Score (0-10) | Evaluation Notes / Citations |
 | :--- | :---: | :---: | :---: | :--- |
-| **Single-Agent Baseline (Query 1)** | 238.84s | $0.001757 | 7.5/10.0 | Sources: 0, Cited: 0 (0%) |
-| **Multi-Agent Workflow (Query 1)** | 88.25s | $0.003181 | 0.0/10.0 | Sources: 5, Cited: 0 (0%) |
-| **Single-Agent Baseline (Query 2)** | 27.47s | $0.002026 | 8.5/10.0 | Sources: 0, Cited: 0 (0%) |
-| **Multi-Agent Workflow (Query 2)** | 378.64s | $0.017054 | 8.5/10.0 | Sources: 14, Cited: 5 (36%) | Errors: 1 |
+| **Single-Agent Baseline (Query 1)** | 11.25s | $0.001088 | 4.0/10.0 | Sources: 0, Cited: 0 (0%) |
+| **Multi-Agent Workflow (Query 1)** | 3.80s | $0.000158 | 0.0/10.0 | Sources: 0, Cited: 0 (0%) |
+| **Single-Agent Baseline (Query 2)** | 49.05s | $0.004482 | 7.5/10.0 | Sources: 0, Cited: 0 (0%) |
+| **Multi-Agent Workflow (Query 2)** | 432.33s | $0.011748 | 8.2/10.0 | Sources: 13, Cited: 5 (38%) | Errors: 1 |
 
 ## Detailed Analysis
 
