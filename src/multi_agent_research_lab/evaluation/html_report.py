@@ -920,6 +920,7 @@ def render_html_report(runs_data: list[dict[str, Any]]) -> str:
                     <button class="tab-btn" onclick="switchOutputTab('sources')">Sources & References</button>
                     <button class="tab-btn" onclick="switchOutputTab('pipelines')">Pipelines</button>
                     <button class="tab-btn" onclick="switchOutputTab('rubric')">Rubric Assessor</button>
+                    <button class="tab-btn" onclick="switchOutputTab('langfuse-trace')">Langfuse Trace</button>
                 </div>
 
                 <div class="output-panel">
@@ -1558,6 +1559,16 @@ def render_html_report(runs_data: list[dict[str, Any]]) -> str:
                                 </div>
                             </div>
                         </div>
+                    </div>
+                `;
+            }} else if (activeOutputTab === 'langfuse-trace') {{
+                container.innerHTML = `
+                    <div class="output-panel-header">
+                        <span class="output-panel-title">Langfuse Tracing Dashboard</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Visual agent trace log</span>
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <img src="langfuse_trace.png" alt="Langfuse Trace" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);">
                     </div>
                 `;
             }}

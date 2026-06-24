@@ -28,3 +28,21 @@ This report compares the performance, latency, cost, and output quality of the S
 ## Recommendations
 - **Use Single-Agent** for fast, simple, or low-cost informational requests where structural depth is not critical.
 - **Use Multi-Agent** for complex research, competitive analysis, and reports where accuracy, validation (Critic), and comprehensive source citation are essential.
+
+## Failure Modes & Mitigations
+
+### 1. Premature Termination (Supervisor Routing Error)
+- **Failure Mode**: As observed in **Query 1**, the Supervisor agent routed directly to `done` on the very first iteration without invoking any worker agents (Researcher, Analyst, Writer). This resulted in a very short execution time (3.80s), a null final answer, and a quality score of `0.0`.
+- **Root Cause**: The Supervisor's prompt lacked strict guidelines on when it is acceptable to end, or the LLM hallucinated that the task was already complete.
+- **Fix / Mitigation**:
+  - Enforce in the Supervisor's system prompt that `done` can only be routed if a final synthesized report exists in the shared state.
+  - Implement a state validator in the graph transition logic that prevents transitioning to the end state if `final_answer` is null or empty, routing back to the Supervisor or Writer instead.
+  - Lower the router LLM's temperature to `0.0`.
+
+### 2. Infinite Loops & High Latency (Critic-Writer Loop)
+- **Failure Mode**: As seen in **Query 2**, the multi-agent workflow took 432.33 seconds and encountered 1 error. This happens when the Critic repeatedly rejects the Writer's draft due to citation gaps or quality issues, causing the graph to cycle back and forth.
+- **Root Cause**: Overly strict Critic criteria and a lack of loop-breaking logic in the state machine.
+- **Fix / Mitigation**:
+  - Implement a strict `max_iterations` counter (e.g., max 5 iterations) in the LangGraph state. When reached, the system must force a final answer output.
+  - Design a progressive relaxation of Critic criteria: as the iteration count increases, the Critic should tolerate minor issues or auto-correct them rather than forcing a full re-draft.
+
