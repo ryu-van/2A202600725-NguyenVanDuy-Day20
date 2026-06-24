@@ -3,10 +3,13 @@
 Keep config small and explicit. Do not read environment variables directly in agents.
 """
 
+import dotenv
 from functools import lru_cache
 
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+dotenv.load_dotenv(override=True)
 
 
 class Settings(BaseSettings):
